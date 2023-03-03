@@ -10,6 +10,10 @@ module.exports = {
         name: 'Blog',
         url: 'https://blog.rdshoep.com',
       },
+      {
+        name: 'Github',
+        url: 'https://github.com/rdshoep',
+      },
     ],
   },
   plugins: [
