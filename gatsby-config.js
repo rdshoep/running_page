@@ -97,5 +97,20 @@ module.exports = {
         clientsClaim: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds:[
+          'G-1M05Z7BGQ8'
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
 };
