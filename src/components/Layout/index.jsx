@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <Header title={siteTitle} />
       <div className="pa3 pa5-l">{children}</div>
-      <footer style="clear: both; padding: 20px; text-align: center">
+      <footer className={styles.footer}>
         <a href="https://beian.miit.gov.cn/">京ICP备14029174号-1</a>
       </footer>
     </div>
