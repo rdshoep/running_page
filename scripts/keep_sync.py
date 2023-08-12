@@ -71,7 +71,9 @@ def decode_runmap_data(text):
     return run_points_data
 
 
-def parse_raw_data_to_nametuple(session, run_data, old_gpx_ids, with_download_gpx=False):
+def parse_raw_data_to_nametuple(
+    session, run_data, old_gpx_ids, with_download_gpx=False
+):
     run_data = run_data["data"]
     run_points_data = []
 
@@ -97,7 +99,9 @@ def parse_raw_data_to_nametuple(session, run_data, old_gpx_ids, with_download_gp
                     p["latitude"] = run_points_data[i][0]
                     p["longitude"] = run_points_data[i][1]
             else:
-                run_points_data = [[p["latitude"], p["longitude"]] for p in run_points_data]
+                run_points_data = [
+                    [p["latitude"], p["longitude"]] for p in run_points_data
+                ]
             if with_download_gpx:
                 if str(keep_id) not in old_gpx_ids:
                     gpx_data = parse_points_to_gpx(run_points_data_gpx, start_time)
